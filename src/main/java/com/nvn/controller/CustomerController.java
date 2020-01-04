@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.nvn.entities.Customer;
-import com.nvn.services.CustomerService;
+import com.nvn.entitie.Customer;
+import com.nvn.service.CustomerService;
 
 @Controller
 public class CustomerController {

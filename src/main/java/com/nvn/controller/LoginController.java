@@ -10,25 +10,25 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.nvn.entities.Account;
-import com.nvn.entities.AccountMapper;
+import com.nvn.entitie.Account;
+import com.nvn.entitie.AccountMapper;
 
 @Controller
 public class LoginController {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
-	@RequestMapping(value= {"/","login"})
+	@RequestMapping(value= {"/","main"})
 	public String login(HttpServletRequest request,@ModelAttribute("account") Account account) {
 		//tên thuộc tính bên jsp phải trùng với model nó sẽ tự động link
 		//if(account.getUserName().equals("devmaster") && account.getPassword().equals("devmaster")) return "main";
-		if(doLogin(account)) return "main";
-		return "login";
+		//if(doLogin(account)) return "main";
+		return "trangchu";
 	}
 	
-	@RequestMapping("/main")
+	@RequestMapping("/c")
 	public String main() {
-		return "main";
+		return "c";
 	}
 	
 	public boolean doLogin(Account account) {

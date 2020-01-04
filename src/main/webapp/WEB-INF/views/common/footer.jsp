@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <footer class="footer_area padding_top">
@@ -16,4 +16,4 @@
 		</div>
 	</div>
 </div>
-</footer>
+</footer> --%>

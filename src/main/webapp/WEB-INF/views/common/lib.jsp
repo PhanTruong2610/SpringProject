@@ -8,42 +8,29 @@
 <base href="<%=basePath%>">
 <!-- css -->
 <!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Home</title>
-<link rel="icon" href="./resources/img/favicon.png">
-<!-- Bootstrap CSS -->
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="./resources/img/favicon.ico" />
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
-<!-- animate CSS -->
-<link rel="stylesheet" href="./resources/css/animate.css">
-<!-- owl carousel CSS -->
-<link rel="stylesheet" href="./resources/css/owl.carousel.min.css">
-<!-- themify CSS -->
-<link rel="stylesheet" href="./resources/css/themify-icons.css">
-<!-- flaticon CSS -->
-<link rel="stylesheet" href="./resources/css/flaticon.css">
-<!-- font awesome CSS -->
-<link rel="stylesheet" href="./resources/css/magnific-popup.css">
-<!-- style CSS -->
-<link rel="stylesheet" href="./resources/css/style.css">
-
-
-<!-- script -->
-<!-- jquery -->
-<script src="./resources/js/jquery-1.12.1.min.js"></script>
-<!-- popper js -->
+<script src="./resources/js/jquery-3.4.1.min.js"></script>
 <script src="./resources/js/popper.min.js"></script>
-<!-- bootstrap js -->
 <script src="./resources/js/bootstrap.min.js"></script>
-<!-- counterup js -->
-<script src="./resources/js/jquery.counterup.min.js"></script>
-<!-- waypoints js -->
-<script src="./resources/js/waypoints.min.js"></script>
-<!-- easing js -->
-<script src="./resources/js/jquery.magnific-popup.js"></script>
-<!-- particles js -->
-<script src="./resources/js/owl.carousel.min.js"></script>
-<!-- custom js -->
-<script src="./resources/js/custom.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/style.css">
+<link rel="shortcut icon" href="./resources/img/favicon.ico" />
+<link
+	href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
+	rel="stylesheet">
+<script src="./resources/js/style.js"></script>
 </html>

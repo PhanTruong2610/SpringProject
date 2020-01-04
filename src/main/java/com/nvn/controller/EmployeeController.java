@@ -4,7 +4,7 @@ import org.springframework.stereotype.*;
 import org.springframework.ui.*;
 import org.springframework.web.bind.annotation.*;
 
-import com.nvn.entities.Employee;
+import com.nvn.entitie.Employee;
 
 @Controller
 public class EmployeeController {
