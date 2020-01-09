@@ -6,7 +6,7 @@
 <head>
 <title>Trang chủ</title>
 
-<jsp:include page="../common/lib.jsp" />
+<jsp:include page="../../common/lib.jsp" />
 </head>
 <body>
 	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

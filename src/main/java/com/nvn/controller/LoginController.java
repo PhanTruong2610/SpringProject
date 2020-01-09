@@ -18,17 +18,12 @@ public class LoginController {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
-	@RequestMapping(value= {"/","main"})
+	@RequestMapping(value= {"/","home"})
 	public String login(HttpServletRequest request,@ModelAttribute("account") Account account) {
 		//tên thuộc tính bên jsp phải trùng với model nó sẽ tự động link
 		//if(account.getUserName().equals("devmaster") && account.getPassword().equals("devmaster")) return "main";
 		//if(doLogin(account)) return "main";
-		return "trangchu";
-	}
-	
-	@RequestMapping("/c")
-	public String main() {
-		return "c";
+		return "HOME/home";
 	}
 	
 	public boolean doLogin(Account account) {

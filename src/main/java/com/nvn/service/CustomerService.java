@@ -9,11 +9,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.nvn.entitie.Customer;
 import com.nvn.entitie.CustomerMapper;
-import com.nvn.service.ICustomerService;
+import com.nvn.service.IService;
 
 @Service
 @Transactional
-public class CustomerService implements ICustomerService<Customer>{
+public class CustomerService implements IService<Customer>{
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;

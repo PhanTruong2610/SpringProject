@@ -18,7 +18,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
-<link rel="stylesheet" href="./resources/css/style.css">
+<!-- <link rel="stylesheet" href="./resources/css/style.css"> -->
 <link rel="shortcut icon" href="./resources/img/favicon.ico" />
 <link
 	href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap"

@@ -17,12 +17,12 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto justify-content-center item-menu">
-					<li class="nav-item"><a class="nav-link" href="#">Trang
+					<li class="nav-item"><a class="nav-link" href="main">Trang
 							chủ<span class="sr-only">(current)</span>
 					</a></li>
 					<li class="nav-item active"><a class="nav-link" id="btnc"
-						href="#">C/C++</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">HTML</a></li>
+						href="c">C/C++</a></li>
+					<li class="nav-item"><a class="nav-link" href="html">HTML</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">CSS</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">JavaScript</a>
 					</li>

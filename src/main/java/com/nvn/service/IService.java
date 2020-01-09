@@ -3,7 +3,7 @@ package com.nvn.service;
 import java.util.List;
 
 
-public interface ICustomerService<K> {
+public interface IService<K> {
 	public List<K> findAll();
 	public K findById(int id);
 	public void save(K k);

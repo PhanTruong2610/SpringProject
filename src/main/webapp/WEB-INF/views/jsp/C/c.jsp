@@ -3,8 +3,10 @@
 	pageEncoding="UTF-8"%>
 
 <title>Lập trình C/C++</title>
-<jsp:include page="../common/lib.jsp" />
-<jsp:include page="../common/header.jsp" />
+<jsp:include page="../../common/lib.jsp" />
+<jsp:include page="../../common/header.jsp" />
+
+<link rel="stylesheet" href="./resources/css/styleC.css">
 
 <div class="container-fluid main" id="col">
 	<div class="row">
@@ -55,14 +57,16 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-12" data-spy="scroll" data-target="#list"
-						data-offset="0" id="content"></div>
+						data-offset="0" id="content">
+						
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<jsp:include page="../common/footer.jsp" />
+<jsp:include page="../../common/footer.jsp" />
 
 <script type="text/javascript">
 	function c_content(){
