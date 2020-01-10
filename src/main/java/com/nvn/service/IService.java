@@ -4,9 +4,10 @@ import java.util.List;
 
 
 public interface IService<K> {
-	public List<K> findAll();
-	public K findById(int id);
-	public void save(K k);
-	public void update(K k);
-	public void delete(int id);
+	List<K> findAll(String name);
+	K findById(String name, int id);
+	K findByName(String subname, String name);
+	void insert(String name, K k);
+	void update(String name, K k);
+	void delete(String name, int id);
 }

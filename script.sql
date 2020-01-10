@@ -57,6 +57,8 @@ CREATE TABLE `learning`.`LESSON`
   `TimeCreate` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `SubjectId` INT NOT NULL,
   `UserId` INT NOT NULL,
+  `View` INT,
+  `Url` VARCHAR(100) NOT NULL,
 	PRIMARY KEY (`LessonId`),
     FOREIGN KEY (SubjectId) REFERENCES SUBJECT(SubjectId),
     FOREIGN KEY (UserId) REFERENCES ACCOUNT(UserId)
@@ -65,7 +67,11 @@ CREATE TABLE `learning`.`LESSON`
 INSERT INTO `learning`.`lesson` (`Title`, `Image`, `Content`, `SubjectId`,`UserId`) VALUES ('Giới thiệu', 'img/Anh1.jpg', 'Nội dung bài giới thiệu', '1','1');
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-select lesson.Title,account.Username,lesson.TimeCreate,lesson.Image from lesson join account 
+select lesson.Title,account.FullName,lesson.TimeCreate,lesson.Image,lesson.Content,lesson.SubjectId
+from lesson join account 
 where lesson.UserId=account.UserId;
 
-select * from subject;
+select * from lesson
+where lesson.Title = N'Giới thiệu';
+
+SELECT * FROM Lesson WHERE lessonId = 1;

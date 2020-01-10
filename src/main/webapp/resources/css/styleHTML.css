@@ -48,4 +48,18 @@ body{
 .personpost{
     bottom: 0px;
     position: absolute;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.title{
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	top: 0px;
+}
+
+.shortcontent{
+	position: absolute;
+	top: 25px;
 }

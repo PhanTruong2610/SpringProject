@@ -1,0 +1,21 @@
+ROLE(RoleId, RoleName)
+ACCOUNT(UserId, Username, Password, TimeCreate, RoleId)
+USER(UserId, FullName, DateOfBirth, Email, Phone)
+
+CATEGORY(CategotyId, CategoryName)
+SUBJECT(SubjectId, SubjectName, UserId, CategoryId)
+LESSON(LessonId, SubjectId, Title, Image, Content, TimeCreate, UserId, View)
+
+
+*các bảng cần có
+- id
+- ngày tạo
+- người tạo
+- ngày sửa
+- người sửa
+- trạng thái
+- isdelete
+- keyword dành cho seo
+- title
+- description
+

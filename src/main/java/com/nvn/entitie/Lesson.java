@@ -1,12 +1,48 @@
 package com.nvn.entitie;
 
 public class Lesson {
+	int lessonId;
+	int subjectId;
+	int userId;
 	String title;
 	String image;
 	String content;
 	String timeCreate;
-	int subjectId;
 	String fullName;
+	String view;
+	String url;
+
+	public String getView() {
+		return view;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public void setView(String view) {
+		this.view = view;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public int getLessonId() {
+		return lessonId;
+	}
+
+	public void setLessonId(int lessonId) {
+		this.lessonId = lessonId;
+	}
 
 	public String getFullName() {
 		return fullName;
@@ -60,12 +96,24 @@ public class Lesson {
 		super();
 	}
 
-	public Lesson(String title, String image, String content, String timeCreate, int subjectId, String fullName) {
+	public Lesson(int lessonId, String title, String image, String content, String timeCreate, int subjectId,
+			String fullName, String url) {
 		super();
+		this.lessonId = lessonId;
 		this.title = title;
 		this.image = image;
 		this.content = content;
 		this.timeCreate = timeCreate;
+		this.subjectId = subjectId;
+		this.fullName = fullName;
+		this.url = url;
+	}
+
+	public Lesson(String title, String image, String content, int subjectId, String fullName) {
+		super();
+		this.title = title;
+		this.image = image;
+		this.content = content;
 		this.subjectId = subjectId;
 		this.fullName = fullName;
 	}
