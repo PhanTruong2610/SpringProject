@@ -1,4 +1,4 @@
-CREATE SCHEMA `learning` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
+CREATE SCHEMA `new_schema` ;
 CREATE TABLE `learning`.`ROLE` 
 (
   `RoleId` INT NOT NULL AUTO_INCREMENT,
@@ -64,14 +64,23 @@ CREATE TABLE `learning`.`LESSON`
     FOREIGN KEY (UserId) REFERENCES ACCOUNT(UserId)
 );
 
+CREATE TABLE `learning`.`UPDATELESSON` 
+(
+  `LessonId` INT NOT NULL AUTO_INCREMENT,
+  `Title` NVARCHAR(100) NOT NULL,
+  `Image` VARCHAR(100) NOT NULL,
+  `Content` LONGTEXT NOT NULL,
+  `TimeUpdate` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `SubjectId` INT NOT NULL,
+  `UserId` INT NOT NULL,
+  `View` INT,
+  `Url` VARCHAR(100) NOT NULL,
+	PRIMARY KEY (`LessonId`),
+    FOREIGN KEY (SubjectId) REFERENCES SUBJECT(SubjectId),
+    FOREIGN KEY (UserId) REFERENCES ACCOUNT(UserId)
+);
+
 INSERT INTO `learning`.`lesson` (`Title`, `Image`, `Content`, `SubjectId`,`UserId`) VALUES ('Giới thiệu', 'img/Anh1.jpg', 'Nội dung bài giới thiệu', '1','1');
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-select lesson.Title,account.FullName,lesson.TimeCreate,lesson.Image,lesson.Content,lesson.SubjectId
-from lesson join account 
-where lesson.UserId=account.UserId;
-
-select * from lesson
-where lesson.Title = N'Giới thiệu';
-
-SELECT * FROM Lesson WHERE lessonId = 1;
+select * from lesson;

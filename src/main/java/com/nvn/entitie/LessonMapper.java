@@ -14,9 +14,11 @@ public class LessonMapper implements RowMapper<Lesson> {
 		lesson.setSubjectId(rs.getInt("subjectId"));
 		lesson.setFullName(rs.getString("fullName"));
 		lesson.setTimeCreate(rs.getString("timeCreate"));
+		lesson.setTimeCreate(rs.getString("timeUpdate"));
 		lesson.setContent(rs.getString("content"));
 		lesson.setTitle(rs.getString("title"));
 		lesson.setUrl(rs.getString("url"));
+		
 		return lesson;
 	}
 

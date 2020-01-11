@@ -17,16 +17,16 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto justify-content-center item-menu">
-					<li class="nav-item"><a class="nav-link" href="main">Trang
+					<li class="nav-item"><a class="nav-link" href="home">Trang
 							chủ<span class="sr-only">(current)</span>
 					</a></li>
-					<li class="nav-item" id="li_c"><a class="nav-link"
+					<li class="nav-item" id="c"><a class="nav-link"
 						href="c">C/C++</a></li>
-					<li class="nav-item" id="li_html"><a class="nav-link" href="html">HTML</a></li>
-					<li class="nav-item" id="li_css"><a class="nav-link" href="#">CSS</a></li>
-					<li class="nav-item" id="li_javascript"><a class="nav-link" href="#">JavaScript</a>
+					<li class="nav-item" id="html"><a class="nav-link" href="html">HTML</a></li>
+					<li class="nav-item" id="css"><a class="nav-link" href="#">CSS</a></li>
+					<li class="nav-item" id="javascript"><a class="nav-link" href="#">JavaScript</a>
 					</li>
-					<li class="nav-item" id="java"><a class="nav-link" href="#">Java</a></li>
+					<li class="nav-item" id="java"><a class="nav-link" href="manage">Java</a></li>
 					<li class="nav-item" id="python"><a class="nav-link" href="#">Python</a></li>
 					<li class="nav-item dropdown" style="display: none;"><a
 						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"

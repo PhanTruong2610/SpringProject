@@ -8,9 +8,18 @@ public class Lesson {
 	String image;
 	String content;
 	String timeCreate;
+	String timeUpdate;
 	String fullName;
 	String view;
 	String url;
+
+	public String getTimeUpdate() {
+		return timeUpdate;
+	}
+
+	public void setTimeUpdate(String timeUpdate) {
+		this.timeUpdate = timeUpdate;
+	}
 
 	public String getView() {
 		return view;
@@ -116,6 +125,16 @@ public class Lesson {
 		this.content = content;
 		this.subjectId = subjectId;
 		this.fullName = fullName;
+	}
+
+	public Lesson(int subjectId, int userId, String title, String image, String content, String url) {
+		super();
+		this.subjectId = subjectId;
+		this.userId = userId;
+		this.title = title;
+		this.image = image;
+		this.content = content;
+		this.url = url;
 	}
 
 }

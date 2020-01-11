@@ -35,8 +35,8 @@ public class LessonService implements IService<Lesson>{
 	}
 	
 	public void insert(String name, Lesson lesson){
-		String sql = "INSERT INTO Lesson (Title, Image, Content, SubjectId, UserId) VALUES (?, ?, ?, ?, ?)";
-		jdbcTemplate.update(sql, lesson.getTitle(), lesson.getImage(), lesson.getContent(), lesson.getSubjectId(), lesson.getUserId());
+		String sql = "INSERT INTO Lesson (Title, Image, Content, SubjectId, UserId, Url) VALUES (?,?,?,?,?,?)";
+		jdbcTemplate.update(sql, lesson.getTitle(), lesson.getImage(), lesson.getContent(), lesson.getSubjectId(), lesson.getUserId(), lesson.getUrl());
 	}
 
 	public void update(String name, Lesson lesson){

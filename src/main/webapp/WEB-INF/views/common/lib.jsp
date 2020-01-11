@@ -8,7 +8,6 @@
 <base href="<%=basePath%>">
 <!-- css -->
 <!-- Required meta tags -->
-<meta charset="UTF-8">
 <link rel="shortcut icon" href="./resources/img/favicon.ico" />
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <script src="./resources/js/jquery-3.4.1.min.js"></script>

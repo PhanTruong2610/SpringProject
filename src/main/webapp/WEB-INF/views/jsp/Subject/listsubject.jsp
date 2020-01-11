@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="./resources/css/styleHTML.css">
 
 <script>
-	$('#li_html').addClass('active');
+	$('#${url}').addClass('active');
 </script>
 
 <!-- <script type="text/javascript">
