@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HTML</title>
 <jsp:include page="../../common/lib.jsp" />
 <jsp:include page="../../common/header.jsp" />
@@ -27,6 +28,7 @@
 		});
 	});
 </script> -->
+</head>
 
 <div class="container main">
 	<div class="row">
@@ -36,28 +38,105 @@
 					<c:forEach var="index" items="${listLesson}">
 						<div class="row rows">
 							<div class="col-3">
-								<img src="${index.image}" class="img">
+								<%-- <img src="${index.image}" class="img"> --%>
+								<div class="imagehover column">
+									<figure> <img src="${index.image}" class="img"></figure>
+								</div>
 							</div>
 							<div class="col-9">
 								<a href="${url}/${index.url}" class="title">${index.title}</a>
-								<div class="shortcontent">${index.content}</div>
+								<div class="shortcontent">${index.shortContent}</div>
 								<div class="personpost">Đăng bởi: ${index.fullName}. Thời
 									gian: ${index.timeCreate}</div>
 							</div>
 						</div>
 					</c:forEach>
 				</c:if>
-				
-				${lesson.content}
-				
 			</div>
 		</div>
 
 		<div class="col-3">
-			<c:forEach var="index" items="${listLesson}">
-				<a href="${url}/${index.url}">${index.title}</a>
+			<div class="fb-page"
+				data-href="https://www.facebook.com/VienCongNgheDevmaster25"
+				data-tabs="" data-width="" data-height="" data-small-header="true"
+				data-adapt-container-width="true" data-hide-cover="false"
+				data-show-facepile="true">
+				<blockquote cite="https://www.facebook.com/VienCongNgheDevmaster25"
+					class="fb-xfbml-parse-ignore">
+					<a href="https://www.facebook.com/VienCongNgheDevmaster25">Viện
+						Công Nghệ Và Đào Tạo Devmaster</a>
+				</blockquote>
+			</div>
+			<%-- <div class="category">THỂ LOẠI</div>
+			<c:forEach var="index" items="${listCategory}">
+				<a href="#" class="info">${index.categoryName}</a>
 				<br />
-			</c:forEach>
+			</c:forEach> --%>
+
+			<%-- 			<a data-toggle="collapse" href="#collapseExample"
+				aria-controls="collapseExample" class="collap dropdown-toggle">THỂ
+				LOẠI</a>
+			<div class="collapse" id="collapseExample">
+				<c:forEach var="index" items="${listCategory}">
+					<a href="#" class="info">${index.categoryName}</a>
+					<br />
+				</c:forEach>
+			</div>
+			<br /> --%>
+
+			<div id="accordionExample">
+				<div>
+					<div id="headingOne">
+						<div class="collap" data-toggle="collapse"
+							data-target="#collapseOne" aria-expanded="true"
+							aria-controls="collapseOne">Bài viết mới</div>
+					</div>
+
+					<div id="collapseOne" class="collapse show"
+						aria-labelledby="headingOne" data-parent="#accordionExample">
+						<div>
+							<c:forEach var="index" items="${listCategory}">
+								<a href="#" class="info">${index.categoryName}</a>
+								<br />
+							</c:forEach>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div id="headingTwo">
+						<div class="collap" data-toggle="collapse"
+							data-target="#collapseTwo" aria-expanded="false"
+							aria-controls="collapseTwo">Thể loại</div>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+						data-parent="#accordionExample">
+						<div>
+							<c:forEach var="index" items="${listCategory}">
+								<a href="#" class="info">${index.categoryName}</a>
+								<br />
+							</c:forEach>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div id="headingThree">
+						<div class="collap" data-toggle="collapse"
+							data-target="#collapseThree" aria-expanded="false"
+							aria-controls="collapseThree">Đóng góp</div>
+					</div>
+					<div id="collapseThree" class="collapse"
+						aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div>
+							<c:forEach var="index" items="${listCategory}">
+								<a href="#" class="info">${index.categoryName}</a>
+								<br />
+							</c:forEach>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
+<jsp:include page="../../common/footer.jsp" />

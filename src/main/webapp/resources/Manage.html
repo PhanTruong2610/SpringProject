@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/styleManage.css">
 	<link rel="shortcut icon" href="img/favicon.ico" />
 	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="ckeditor/ckeditor.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/style.js"></script>
@@ -15,6 +16,12 @@
 			var str = $("#title").val();
         	alert(str);
 		}
+	</script>
+	<script type="text/javascript">
+		var editor=""
+		$(document).ready(function(){
+			editor= CKEDITOR.replace('content');
+		});
 	</script>
 </head>
 <body>
@@ -41,7 +48,7 @@
 							<input type="text" name="image" id="image"><br/>
 
 							<label for="content">Nội dung</label>
-							<input type="text" name="content" id="content"><br/>
+							<textarea name="content" id="content"></textarea><br/>
 
 							<label for="sub">SubjectId</label>
 							<input type="text" name="sub" id="sub"><br/>

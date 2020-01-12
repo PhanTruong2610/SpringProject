@@ -18,13 +18,11 @@ public class HTMLController {
 	@Autowired
 	private LessonService lessonService;
 	
+	
 	@RequestMapping("/html")
 	public String getLesson(Model model) {
-		UriComponentsBuilder builder = ServletUriComponentsBuilder.fromCurrentRequest();
-        String context = builder.buildAndExpand().getPath();
-        String[] list= context.split("/");
-        
 		model.addAttribute("listLesson", lessonService.findAll("html"));
+		model.addAttribute("listCategory", lessonService.findAllCategory());
 		model.addAttribute("url", getUrl());
 		return "Subject/listsubject";
 	}
@@ -38,9 +36,6 @@ public class HTMLController {
 	
 	@RequestMapping("/html/{url}")
 	public String viewLessonByUrl(@PathVariable String url, Model model) {
-		UriComponentsBuilder builder = ServletUriComponentsBuilder.fromCurrentRequest();
-        String context = builder.buildAndExpand().getPath();
-        String[] list= context.split("/");
 		Lesson lesson = lessonService.findByName("html", url);
 		model.addAttribute("lesson", lesson);
 		model.addAttribute("listLesson", lessonService.findAll("html"));

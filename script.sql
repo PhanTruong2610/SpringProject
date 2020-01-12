@@ -28,12 +28,17 @@ INSERT INTO `learning`.`account` (`UserId`, `Username`, `Password`, `TimeCreate`
     
 CREATE TABLE `learning`.`CATEGORY` 
 (
-  `CategotyId` INT NOT NULL AUTO_INCREMENT,
+  `CategoryId` INT NOT NULL AUTO_INCREMENT,
   `CategoryName` NVARCHAR(45) NOT NULL,
 	PRIMARY KEY (`CategotyId`)
 );
 
 INSERT INTO `learning`.`category` (`CategoryName`) VALUES ('Môn học');
+INSERT INTO `learning`.`category` (`CategotyId`, `CategoryName`) VALUES ('2', 'Database');
+INSERT INTO `learning`.`category` (`CategotyId`, `CategoryName`) VALUES ('3', 'IDE');
+INSERT INTO `learning`.`category` (`CategotyId`, `CategoryName`) VALUES ('4', 'Framework');
+INSERT INTO `learning`.`category` (`CategotyId`, `CategoryName`) VALUES ('5', 'Book');
+
 
 CREATE TABLE `learning`.`SUBJECT` 
 (
@@ -54,22 +59,8 @@ CREATE TABLE `learning`.`LESSON`
   `Title` NVARCHAR(100) NOT NULL,
   `Image` VARCHAR(100) NOT NULL,
   `Content` LONGTEXT NOT NULL,
+  `ShortContent` NVARCHAR(500) NOT NULL,
   `TimeCreate` DATETIME DEFAULT CURRENT_TIMESTAMP,
-  `SubjectId` INT NOT NULL,
-  `UserId` INT NOT NULL,
-  `View` INT,
-  `Url` VARCHAR(100) NOT NULL,
-	PRIMARY KEY (`LessonId`),
-    FOREIGN KEY (SubjectId) REFERENCES SUBJECT(SubjectId),
-    FOREIGN KEY (UserId) REFERENCES ACCOUNT(UserId)
-);
-
-CREATE TABLE `learning`.`UPDATELESSON` 
-(
-  `LessonId` INT NOT NULL AUTO_INCREMENT,
-  `Title` NVARCHAR(100) NOT NULL,
-  `Image` VARCHAR(100) NOT NULL,
-  `Content` LONGTEXT NOT NULL,
   `TimeUpdate` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `SubjectId` INT NOT NULL,
   `UserId` INT NOT NULL,

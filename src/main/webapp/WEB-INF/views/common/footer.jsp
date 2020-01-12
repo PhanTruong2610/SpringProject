@@ -1,19 +1,15 @@
-<%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<footer class="footer_area padding_top">
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="copyright_text">
-				<img src="./resources/img/favicon.png" alt="#">
-				<p class="footer-text">
-					Copyright &copy;
-					<script>
-						document.write(new Date().getFullYear());
-					</script>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="copyright_text">
+					<!-- <img src="./resources/img/favicon.ico" alt="#"> -->
+					<p class="footer-text text-center">© 2020 Nguyen Van Nam. All
+						rights reserved.
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-</footer> --%>
+</footer>

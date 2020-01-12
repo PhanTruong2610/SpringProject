@@ -13,19 +13,20 @@
 <script>
 	$('#${url}').addClass('active');
 </script>
-
+</head>
 <div class="container main">
 	<div class="row">
-		<div class="col-9">
+		<div class="col-9 rows">
 			<div class="container-fluid">
 				${lesson.content}
-				
 			</div>
 		</div>
 
 		<div class="col-3">
+			<div class="fb-page" data-href="https://www.facebook.com/VienCongNgheDevmaster25" data-tabs="" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/VienCongNgheDevmaster25" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/VienCongNgheDevmaster25">Viện Công Nghệ Và Đào Tạo Devmaster</a></blockquote></div>
+			<div class="category">Bài học</div>
 			<c:forEach var="index" items="${listLesson}">
-				<a href="${url}/${index.url}">${index.title}</a>
+				<a href="${url}/${index.url}" class="info">${index.title}</a>
 				<br />
 			</c:forEach>
 		</div>

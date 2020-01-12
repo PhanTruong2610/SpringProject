@@ -1,17 +1,25 @@
 package com.nvn.entitie;
 
 public class Lesson {
-	int lessonId;
 	int subjectId;
 	int userId;
 	String title;
 	String image;
 	String content;
+	String shortContent;
 	String timeCreate;
 	String timeUpdate;
 	String fullName;
 	String view;
 	String url;
+
+	public String getShortContent() {
+		return shortContent;
+	}
+
+	public void setShortContent(String shortContent) {
+		this.shortContent = shortContent;
+	}
 
 	public String getTimeUpdate() {
 		return timeUpdate;
@@ -43,14 +51,6 @@ public class Lesson {
 
 	public void setUserId(int userId) {
 		this.userId = userId;
-	}
-
-	public int getLessonId() {
-		return lessonId;
-	}
-
-	public void setLessonId(int lessonId) {
-		this.lessonId = lessonId;
 	}
 
 	public String getFullName() {
@@ -105,10 +105,9 @@ public class Lesson {
 		super();
 	}
 
-	public Lesson(int lessonId, String title, String image, String content, String timeCreate, int subjectId,
+	public Lesson(String title, String image, String content, String timeCreate, int subjectId,
 			String fullName, String url) {
 		super();
-		this.lessonId = lessonId;
 		this.title = title;
 		this.image = image;
 		this.content = content;

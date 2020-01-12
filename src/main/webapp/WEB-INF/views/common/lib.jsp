@@ -15,7 +15,8 @@
 <script src="./resources/js/bootstrap.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+<script type="text/javascript" src="./resources/ckeditor/ckeditor.js"> </script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0"></script>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <!-- <link rel="stylesheet" href="./resources/css/style.css"> -->
 <link rel="shortcut icon" href="./resources/img/favicon.ico" />

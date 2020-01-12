@@ -7,6 +7,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.nvn.entitie.Category;
+import com.nvn.entitie.CategoryMapper;
 import com.nvn.entitie.Lesson;
 import com.nvn.entitie.LessonMapper;
 
@@ -22,6 +24,11 @@ public class LessonService implements IService<Lesson>{
 				"where lesson.SubjectId=(select SubjectId from subject where SubjectName=?);";
 		return jdbcTemplate.query(sql, new LessonMapper(), name);
 	}
+	
+	public List<Category> findAllCategory() {
+		String sql = "select * from category";
+		return jdbcTemplate.query(sql, new CategoryMapper());
+	}
 
 	public Lesson findById(String name, int lessonId) {
 		String sql = "SELECT * FROM Lesson join Account on lesson.UserId=account.UserId WHERE lessonId = ? ";
@@ -35,8 +42,8 @@ public class LessonService implements IService<Lesson>{
 	}
 	
 	public void insert(String name, Lesson lesson){
-		String sql = "INSERT INTO Lesson (Title, Image, Content, SubjectId, UserId, Url) VALUES (?,?,?,?,?,?)";
-		jdbcTemplate.update(sql, lesson.getTitle(), lesson.getImage(), lesson.getContent(), lesson.getSubjectId(), lesson.getUserId(), lesson.getUrl());
+		String sql = "INSERT INTO Lesson (Title, Image, Content,ShortContent, SubjectId, UserId, Url) VALUES (?,?,?,?,?,?,?)";
+		jdbcTemplate.update(sql, lesson.getTitle(), lesson.getImage(), lesson.getContent(),lesson.getShortContent(), lesson.getSubjectId(), lesson.getUserId(), lesson.getUrl());
 	}
 
 	public void update(String name, Lesson lesson){
