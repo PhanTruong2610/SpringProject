@@ -1,4 +1,4 @@
-package com.nvn.entitie;
+package com.nvn.entities;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.nvn.entitie.Lesson;
+import com.nvn.dao.LessonDAO;
+import com.nvn.entities.Lesson;
 import com.nvn.service.LessonService;
 
 @Controller
@@ -18,11 +19,16 @@ public class HTMLController {
 	@Autowired
 	private LessonService lessonService;
 	
+	@Autowired
+	private LessonDAO lessonDAO;
+	
 	
 	@RequestMapping("/html")
 	public String getLesson(Model model) {
 		model.addAttribute("listLesson", lessonService.findAll("html"));
+		//model.addAttribute("listLesson", lessonService.findAll());
 		model.addAttribute("listCategory", lessonService.findAllCategory());
+		//model.addAttribute("listCategory", lessonService.findCategory());
 		model.addAttribute("url", getUrl());
 		return "Subject/listsubject";
 	}

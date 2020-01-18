@@ -10,6 +10,8 @@
 <jsp:include page="../../common/lib.jsp" />
 <jsp:include page="../../common/header.jsp" />
 <link rel="stylesheet" href="./resources/css/styleHTML.css">
+<!-- <link rel="stylesheet" type="text/css"
+	href="./resources/css/styleClock.css"> -->
 
 <script>
 	$('#${url}').addClass('active');
@@ -56,6 +58,19 @@
 		</div>
 
 		<div class="col-3">
+			<!-- 			<div class="clock">
+				<div class="hour">
+					<div class="hr" id="hr"></div>
+				</div>
+				<div class="min">
+					<div class="mn" id="mn"></div>
+				</div>
+				<div class="sec">
+					<div class="sc" id="sc"></div>
+				</div>
+			</div> -->
+			
+			
 			<div class="fb-page"
 				data-href="https://www.facebook.com/VienCongNgheDevmaster25"
 				data-tabs="" data-width="" data-height="" data-small-header="true"
@@ -139,4 +154,22 @@
 	</div>
 </div>
 
+
+
+<!-- <script type="text/javascript">
+	const deg=6;
+	const hr= document.querySelector("#hr");
+	const mn= document.querySelector("#mn");
+	const sc= document.querySelector("#sc");
+
+	setInterval(function(){
+		let day = new Date();
+		let hh = day.getHours()* 30;
+		let mm = day.getMinutes() * deg;
+		let ss =day.getSeconds() * deg;
+		hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+		mn.style.transform = `rotateZ(${mm}deg)`;
+		sc.style.transform = `rotateZ(${ss}deg)`;
+	})
+</script> -->
 <jsp:include page="../../common/footer.jsp" />

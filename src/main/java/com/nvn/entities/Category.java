@@ -1,4 +1,4 @@
-package com.nvn.entitie;
+package com.nvn.entities;
 
 public class Category {
 	int categoryId;

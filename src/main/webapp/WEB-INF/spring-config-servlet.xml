@@ -11,6 +11,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
+	<context:annotation-config />
 	<context:component-scan
 		base-package="com.nvn" />
 	<bean
@@ -30,6 +31,7 @@
 		</property>
 	</bean>
 
+	<!-- jdbc config -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -43,16 +45,30 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
-	<!-- Enable Annotation based Declarative Transaction Management -->
 	<tx:annotation-driven proxy-target-class="true"
 		transaction-manager="transactionManager" />
 
-	<!-- Creating TransactionManager Bean, since JDBC we are creating of type 
-		DataSourceTransactionManager -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+	
+	<!-- hibernate config -->
+	<bean id="hibernateDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+    destroy-method="close">
+    <property name="driverClassName" value="${jdbc.driverClassName}" />
+    <property name="url" value="${jdbc.url}" />
+    <property name="username" value="${jdbc.username}" />
+    <property name="password" value="${jdbc.password}" />
+  </bean>
+  
+  <bean id="sessionFactory"
+    class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+    <property name="dataSource" ref="hibernateDataSource"></property>
+    <property name="packagesToScan" value="com.nvn.model" />
+    <property name="hibernateProperties" value="classpath:hibernate.properties" />
+  </bean>
+	
 
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" />

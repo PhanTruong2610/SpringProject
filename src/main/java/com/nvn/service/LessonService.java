@@ -2,15 +2,17 @@ package com.nvn.service;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.nvn.entitie.Category;
-import com.nvn.entitie.CategoryMapper;
-import com.nvn.entitie.Lesson;
-import com.nvn.entitie.LessonMapper;
+import com.nvn.dao.LessonDAO;
+import com.nvn.entities.Category;
+import com.nvn.entities.CategoryMapper;
+import com.nvn.entities.Lesson;
+import com.nvn.entities.LessonMapper;
 
 @Service
 @Transactional
@@ -18,6 +20,18 @@ public class LessonService implements IService<Lesson>{
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	
+	@Autowired
+	private LessonDAO lessonDAO;
+	
+//	public List<com.nvn.model.Lesson> findAll(){
+//		return lessonDAO.findAll();
+//	}
+//	
+//	public List<com.nvn.model.Category> findCategory(){
+//		return lessonDAO.findAllCategory();
+//	}
+	
 	
 	public List<Lesson> findAll(String name) {
 		String sql = "select * from lesson join account on lesson.UserId=account.UserId\r\n" + 

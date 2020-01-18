@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.nvn.entitie.Lesson;
+import com.nvn.entities.Lesson;
 import com.nvn.service.LessonService;
 
 @Controller

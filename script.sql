@@ -1,4 +1,4 @@
-CREATE SCHEMA `new_schema` ;
+CREATE SCHEMA `learning` ;
 CREATE TABLE `learning`.`ROLE` 
 (
   `RoleId` INT NOT NULL AUTO_INCREMENT,

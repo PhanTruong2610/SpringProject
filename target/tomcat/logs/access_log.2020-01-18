@@ -1,0 +1,11 @@
+127.0.0.1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/html HTTP/1.1" 200 10475 http-bio-8080-exec-2 1812
+127.0.0.1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/html HTTP/1.1" 200 10475 http-bio-8080-exec-1 1814
+127.0.0.1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/css/bootstrap.min.css HTTP/1.1" 200 155758 http-bio-8080-exec-3 28
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/css/styleHTML.css HTTP/1.1" 200 2913 http-bio-8080-exec-9 5
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145 http-bio-8080-exec-8 5
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/js/popper.min.js HTTP/1.1" 200 21004 http-bio-8080-exec-7 4
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/js/bootstrap.min.js HTTP/1.1" 200 58072 http-bio-8080-exec-6 8
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/ckeditor/ckeditor.js HTTP/1.1" 200 718145 http-bio-8080-exec-5 20
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/js/style.js HTTP/1.1" 200 51088 http-bio-8080-exec-7 7
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:43 +0700] "GET /SpringProject/resources/img/Anh1.jpg HTTP/1.1" 200 8452326 http-bio-8080-exec-8 507
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:20:11:44 +0700] "GET /SpringProject/resources/img/favicon.ico HTTP/1.1" 200 1150 http-bio-8080-exec-8 5

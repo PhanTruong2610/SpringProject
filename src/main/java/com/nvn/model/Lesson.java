@@ -1,0 +1,156 @@
+package com.nvn.model;
+// Generated Jan 18, 2020 4:07:11 PM by Hibernate Tools 3.5.0.Final
+
+import java.util.Date;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name = "lesson")
+public class Lesson{
+
+	private LessonId id;
+	private Account account;
+	private Subject subject;
+	private String title;
+	private String image;
+	private String content;
+	private String shortContent;
+	private Date timeCreate;
+	private Date timeUpdate;
+	private Integer view;
+
+	public Lesson() {
+	}
+
+	public Lesson(LessonId id, Account account, Subject subject, String title, String image, String content) {
+		this.id = id;
+		this.account = account;
+		this.subject = subject;
+		this.title = title;
+		this.image = image;
+		this.content = content;
+	}
+
+	public Lesson(LessonId id, Account account, Subject subject, String title, String image, String content,
+			String shortContent, Date timeCreate, Date timeUpdate, Integer view) {
+		this.id = id;
+		this.account = account;
+		this.subject = subject;
+		this.title = title;
+		this.image = image;
+		this.content = content;
+		this.shortContent = shortContent;
+		this.timeCreate = timeCreate;
+		this.timeUpdate = timeUpdate;
+		this.view = view;
+	}
+
+	@EmbeddedId
+
+	@AttributeOverrides({
+			@AttributeOverride(name = "subjectId", column = @Column(name = "SubjectId", nullable = false)),
+			@AttributeOverride(name = "url", column = @Column(name = "Url", nullable = false, length = 100)) })
+	public LessonId getId() {
+		return this.id;
+	}
+
+	public void setId(LessonId id) {
+		this.id = id;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "UserId", nullable = false)
+	public Account getAccount() {
+		return this.account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "SubjectId", nullable = false, insertable = false, updatable = false)
+	public Subject getSubject() {
+		return this.subject;
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
+	@Column(name = "Title", nullable = false, length = 100)
+	public String getTitle() {
+		return this.title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	@Column(name = "Image", nullable = false, length = 100)
+	public String getImage() {
+		return this.image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	@Column(name = "Content", nullable = false)
+	public String getContent() {
+		return this.content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	@Column(name = "ShortContent", length = 500)
+	public String getShortContent() {
+		return this.shortContent;
+	}
+
+	public void setShortContent(String shortContent) {
+		this.shortContent = shortContent;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "TimeCreate", length = 19)
+	public Date getTimeCreate() {
+		return this.timeCreate;
+	}
+
+	public void setTimeCreate(Date timeCreate) {
+		this.timeCreate = timeCreate;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "TimeUpdate", length = 19)
+	public Date getTimeUpdate() {
+		return this.timeUpdate;
+	}
+
+	public void setTimeUpdate(Date timeUpdate) {
+		this.timeUpdate = timeUpdate;
+	}
+
+	@Column(name = "View")
+	public Integer getView() {
+		return this.view;
+	}
+
+	public void setView(Integer view) {
+		this.view = view;
+	}
+
+}
