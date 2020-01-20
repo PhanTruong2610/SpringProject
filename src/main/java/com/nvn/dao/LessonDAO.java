@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.nvn.entities.*;
-//import com.nvn.model.*;
 
 @Repository
 @Transactional

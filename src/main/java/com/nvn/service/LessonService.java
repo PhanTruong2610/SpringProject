@@ -12,7 +12,7 @@ import com.nvn.dao.LessonDAO;
 import com.nvn.entities.Category;
 import com.nvn.entities.Lesson;
 //import com.nvn.model.Category;
-import com.nvn.model.CategoryMapper;
+//import com.nvn.model.CategoryMapper;
 //import com.nvn.model.Lesson;
 
 import com.nvn.model.LessonMapper;
@@ -60,8 +60,8 @@ public class LessonService implements IService<Lesson>{
 	public void delete(String name, int id){
 		String sql = "DELETE FROM Lesson WHERE id = " + id;
 		jdbcTemplate.update(sql);
-	}*/
-	
+	}
+	*/
 	
 	//hibernate
 	@Autowired

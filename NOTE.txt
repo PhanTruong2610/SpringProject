@@ -20,4 +20,19 @@ LESSON(LessonId, SubjectId, Title, Image, Content, TimeCreate, UserId, View)
 - description
 
 - Controller(DI @Autowired Service) -> Service(DI @Autowired DAO, @Service) -> DAO(@Repository)
-- 
+
+
+pom.xml
+src
+├───main
+│   ├───java
+│   │   └───com
+│   │       └───zetcode
+│   │           │   Application.java
+│   │           └───config
+│   │                   AppConfig.java
+│   └───resources
+│           application.properties
+│           logback.xml
+└───test
+    └───java

@@ -29,10 +29,10 @@
 								</div>
 							</div>
 							<div class="col-9">
-								<%-- <a href="${url}/${index.url}" class="title">${index.title}</a> --%> <!-- jdbc -->
+								<%-- <a href="${url}/${index.url}" class="title">${index.title}</a> <!-- jdbc --> --%>
 								<a href="${url}/${index.id.url}" class="title">${index.title}</a> <!-- hibernate -->
 								<div class="shortcontent">${index.shortContent}</div>
-								<%-- <div class="personpost">Đăng bởi: ${index.fullName}</div> --%> <!-- jdbc -->
+								<%-- <div class="personpost">Đăng bởi: ${index.fullName}</div> <!-- jdbc --> --%>
 								<div class="personpost">Đăng bởi: ${index.account.fullName}</div> <!-- hibernate -->
 							</div>
 						</div>
