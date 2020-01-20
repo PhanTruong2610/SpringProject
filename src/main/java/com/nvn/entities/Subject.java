@@ -1,4 +1,4 @@
-package com.nvn.model;
+package com.nvn.entities;
 // Generated Jan 18, 2020 4:07:11 PM by Hibernate Tools 3.5.0.Final
 
 import java.util.HashSet;

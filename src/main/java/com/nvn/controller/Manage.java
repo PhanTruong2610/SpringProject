@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.nvn.entities.Lesson;
+import com.nvn.model.Lesson;
 import com.nvn.service.LessonService;
 
 
@@ -22,7 +22,7 @@ public class Manage {
 	
 	@RequestMapping(value ="/insert")
 	public String insert(Model model, @ModelAttribute("lesson") Lesson lesson) {
-		lessonService.insert("",lesson);
+//		lessonService.insert("",lesson);
 		return "redirect:html";
 	}
 }

@@ -1,6 +1,10 @@
 eclipse.preferences.version=1
-encoding//src/main/java/com/nvn/dao/LessonDAO.java=UTF-8
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
 encoding//src/main/webapp/WEB-INF/views/common/header.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/jsp/HOME/home.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/jsp/MANAGE/manage.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/jsp/Subject/listsubject.jsp=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8

@@ -10,28 +10,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.nvn.dao.LessonDAO;
 import com.nvn.entities.Category;
-import com.nvn.entities.CategoryMapper;
 import com.nvn.entities.Lesson;
-import com.nvn.entities.LessonMapper;
+//import com.nvn.model.Category;
+import com.nvn.model.CategoryMapper;
+//import com.nvn.model.Lesson;
+
+import com.nvn.model.LessonMapper;
 
 @Service
 @Transactional
 public class LessonService implements IService<Lesson>{
-
-	@Autowired
+	
+	//jdbc
+	/*@Autowired
 	private JdbcTemplate jdbcTemplate;
-	
-	@Autowired
-	private LessonDAO lessonDAO;
-	
-//	public List<com.nvn.model.Lesson> findAll(){
-//		return lessonDAO.findAll();
-//	}
-//	
-//	public List<com.nvn.model.Category> findCategory(){
-//		return lessonDAO.findAllCategory();
-//	}
-	
 	
 	public List<Lesson> findAll(String name) {
 		String sql = "select * from lesson join account on lesson.UserId=account.UserId\r\n" + 
@@ -68,5 +60,42 @@ public class LessonService implements IService<Lesson>{
 	public void delete(String name, int id){
 		String sql = "DELETE FROM Lesson WHERE id = " + id;
 		jdbcTemplate.update(sql);
+	}*/
+	
+	
+	//hibernate
+	@Autowired
+	private LessonDAO lessonDAO;
+
+	public List<Lesson> findAll(String name) {
+		return lessonDAO.findAll(name);
+	}
+
+	public List<Category> findAllCategory() {
+		return lessonDAO.findAllCategory();
+	}
+
+	public Lesson findByName(String name, String url) {
+		return lessonDAO.findByName(name, url);
+	}
+
+	public void insert(String name, Lesson lesson) {
+
+		lessonDAO.insert(lesson);
+	}
+
+	public Lesson findById(String name, int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void update(String name, Lesson k) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void delete(String name, int id) {
+		// TODO Auto-generated method stub
+		
 	}
 }

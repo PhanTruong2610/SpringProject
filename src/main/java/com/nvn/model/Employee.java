@@ -1,4 +1,4 @@
-package com.nvn.entities;
+package com.nvn.model;
 
 public class Employee {
 	private int id;

@@ -1,156 +1,139 @@
 package com.nvn.model;
-// Generated Jan 18, 2020 4:07:11 PM by Hibernate Tools 3.5.0.Final
 
-import java.util.Date;
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+public class Lesson {
+	int subjectId;
+	int userId;
+	String title;
+	String image;
+	String content;
+	String shortContent;
+	String timeCreate;
+	String timeUpdate;
+	String fullName;
+	String view;
+	String url;
 
-@Entity
-@Table(name = "lesson")
-public class Lesson{
-
-	private LessonId id;
-	private Account account;
-	private Subject subject;
-	private String title;
-	private String image;
-	private String content;
-	private String shortContent;
-	private Date timeCreate;
-	private Date timeUpdate;
-	private Integer view;
-
-	public Lesson() {
-	}
-
-	public Lesson(LessonId id, Account account, Subject subject, String title, String image, String content) {
-		this.id = id;
-		this.account = account;
-		this.subject = subject;
-		this.title = title;
-		this.image = image;
-		this.content = content;
-	}
-
-	public Lesson(LessonId id, Account account, Subject subject, String title, String image, String content,
-			String shortContent, Date timeCreate, Date timeUpdate, Integer view) {
-		this.id = id;
-		this.account = account;
-		this.subject = subject;
-		this.title = title;
-		this.image = image;
-		this.content = content;
-		this.shortContent = shortContent;
-		this.timeCreate = timeCreate;
-		this.timeUpdate = timeUpdate;
-		this.view = view;
-	}
-
-	@EmbeddedId
-
-	@AttributeOverrides({
-			@AttributeOverride(name = "subjectId", column = @Column(name = "SubjectId", nullable = false)),
-			@AttributeOverride(name = "url", column = @Column(name = "Url", nullable = false, length = 100)) })
-	public LessonId getId() {
-		return this.id;
-	}
-
-	public void setId(LessonId id) {
-		this.id = id;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "UserId", nullable = false)
-	public Account getAccount() {
-		return this.account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "SubjectId", nullable = false, insertable = false, updatable = false)
-	public Subject getSubject() {
-		return this.subject;
-	}
-
-	public void setSubject(Subject subject) {
-		this.subject = subject;
-	}
-
-	@Column(name = "Title", nullable = false, length = 100)
-	public String getTitle() {
-		return this.title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	@Column(name = "Image", nullable = false, length = 100)
-	public String getImage() {
-		return this.image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-	@Column(name = "Content", nullable = false)
-	public String getContent() {
-		return this.content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	@Column(name = "ShortContent", length = 500)
 	public String getShortContent() {
-		return this.shortContent;
+		return shortContent;
 	}
 
 	public void setShortContent(String shortContent) {
 		this.shortContent = shortContent;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "TimeCreate", length = 19)
-	public Date getTimeCreate() {
-		return this.timeCreate;
+	public String getTimeUpdate() {
+		return timeUpdate;
 	}
 
-	public void setTimeCreate(Date timeCreate) {
-		this.timeCreate = timeCreate;
-	}
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "TimeUpdate", length = 19)
-	public Date getTimeUpdate() {
-		return this.timeUpdate;
-	}
-
-	public void setTimeUpdate(Date timeUpdate) {
+	public void setTimeUpdate(String timeUpdate) {
 		this.timeUpdate = timeUpdate;
 	}
 
-	@Column(name = "View")
-	public Integer getView() {
-		return this.view;
+	public String getView() {
+		return view;
 	}
 
-	public void setView(Integer view) {
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public void setView(String view) {
 		this.view = view;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getTimeCreate() {
+		return timeCreate;
+	}
+
+	public void setTimeCreate(String timeCreate) {
+		this.timeCreate = timeCreate;
+	}
+
+	public int getSubjectId() {
+		return subjectId;
+	}
+
+	public void setSubjectId(int subjectId) {
+		this.subjectId = subjectId;
+	}
+
+	public Lesson() {
+		super();
+	}
+
+	public Lesson(String title, String image, String content, String timeCreate, int subjectId,
+			String fullName, String url) {
+		super();
+		this.title = title;
+		this.image = image;
+		this.content = content;
+		this.timeCreate = timeCreate;
+		this.subjectId = subjectId;
+		this.fullName = fullName;
+		this.url = url;
+	}
+
+	public Lesson(String title, String image, String content, int subjectId, String fullName) {
+		super();
+		this.title = title;
+		this.image = image;
+		this.content = content;
+		this.subjectId = subjectId;
+		this.fullName = fullName;
+	}
+
+	public Lesson(int subjectId, int userId, String title, String image, String content, String url) {
+		super();
+		this.subjectId = subjectId;
+		this.userId = userId;
+		this.title = title;
+		this.image = image;
+		this.content = content;
+		this.url = url;
 	}
 
 }

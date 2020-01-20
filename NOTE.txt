@@ -19,3 +19,5 @@ LESSON(LessonId, SubjectId, Title, Image, Content, TimeCreate, UserId, View)
 - title
 - description
 
+- Controller(DI @Autowired Service) -> Service(DI @Autowired DAO, @Service) -> DAO(@Repository)
+- 
