@@ -73,5 +73,7 @@ CREATE TABLE `learning`.`LESSON`
 
 INSERT INTO `learning`.`lesson` (`Title`, `Image`, `Content`, `SubjectId`,`UserId`) VALUES ('Giới thiệu', 'img/Anh1.jpg', 'Nội dung bài giới thiệu', '1','1');
 
---------------------------------------------------------------------------------------------------------------------------------------------------
-select * from lesson;
+	--------------------------------------------------------------------------------------------------------------------------------------------------
+	select * from lesson;
+    
+    INSERT INTO Lesson (Title, Image, Content, ShortContent, SubjectId, UserId, Url) VALUES ('lich su', './resources/img/Anh1.jpg', 'sdf', 'ShortContent', '1', '1', 'lich-su');

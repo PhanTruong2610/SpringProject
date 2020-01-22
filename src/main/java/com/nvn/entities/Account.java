@@ -1,5 +1,4 @@
 package com.nvn.entities;
-// Generated Jan 18, 2020 4:07:11 PM by Hibernate Tools 3.5.0.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -9,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
@@ -31,7 +32,7 @@ public class Account implements java.io.Serializable {
 	private Date dateOfBirth;
 	private String email;
 	private String phone;
-	private int roleId;
+//	private int roleId;
 	private Set<Lesson> lessons = new HashSet<Lesson>(0);
 	private Set<Subject> subjects = new HashSet<Subject>(0);
 
@@ -47,7 +48,7 @@ public class Account implements java.io.Serializable {
 		this.dateOfBirth = dateOfBirth;
 		this.email = email;
 		this.phone = phone;
-		this.roleId = roleId;
+//		this.roleId = roleId;
 	}
 
 	public Account(Role role, String username, String password, Date timeCreate, String fullName, Date dateOfBirth,
@@ -60,7 +61,7 @@ public class Account implements java.io.Serializable {
 		this.dateOfBirth = dateOfBirth;
 		this.email = email;
 		this.phone = phone;
-		this.roleId = roleId;
+//		this.roleId = roleId;
 		this.lessons = lessons;
 		this.subjects = subjects;
 	}
@@ -78,8 +79,9 @@ public class Account implements java.io.Serializable {
 		this.userId = userId;
 	}
 
-	@OneToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@PrimaryKeyJoinColumn
+	@JoinColumn(name = "RoleId", nullable = false)
 	public Role getRole() {
 		return this.role;
 	}
@@ -153,14 +155,14 @@ public class Account implements java.io.Serializable {
 		this.phone = phone;
 	}
 
-	@Column(name = "RoleId", nullable = false)
-	public int getRoleId() {
-		return this.roleId;
-	}
-
-	public void setRoleId(int roleId) {
-		this.roleId = roleId;
-	}
+//	@Column(name = "RoleId", nullable = false)
+//	public int getRoleId() {
+//		return this.roleId;
+//	}
+//
+//	public void setRoleId(int roleId) {
+//		this.roleId = roleId;
+//	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
 	public Set<Lesson> getLessons() {

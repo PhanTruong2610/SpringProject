@@ -3,6 +3,7 @@ package com.nvn.entities;
 import java.util.Date;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -67,7 +68,7 @@ public class Lesson {
 		this.id = id;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY,cascade=CascadeType.ALL)
 	@JoinColumn(name = "UserId", nullable = false)
 	public Account getAccount() {
 		return this.account;
@@ -77,7 +78,7 @@ public class Lesson {
 		this.account = account;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name = "SubjectId", nullable = false, insertable = false, updatable = false)
 	public Subject getSubject() {
 		return this.subject;

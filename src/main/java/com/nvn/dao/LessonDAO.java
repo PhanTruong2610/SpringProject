@@ -6,10 +6,15 @@ import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.nvn.entities.*;
+import com.nvn.entities.Account;
+import com.nvn.entities.Category;
+import com.nvn.entities.Lesson;
+import com.nvn.entities.Subject;
 
 @Repository
 @Transactional
@@ -50,12 +55,23 @@ public class LessonDAO {
 		return result.get(0);
 	}
 	
+	public List<Account> findAllAccount() {
+		Session session = this.sessionFactory.openSession();
+		return session.createQuery("FROM Account acc where acc.userId=1", Account.class).getResultList();
+	}
+	
+	public List<Subject> findAllSubject() {
+		Session session = this.sessionFactory.openSession();
+		return session.createQuery("FROM Subject sub where sub.subjectId=1", Subject.class).getResultList();
+	}
+	
 	public void insert(Lesson lesson) {
 		Session session = this.sessionFactory.openSession();
-//		session.beginTransaction();
-		session.save(lesson);
-//		session.getTransaction().commit();
-//		session.close();
-//		sessionFactory.close();
+		String sql = "delete Lesson les where les.title='lich su'";
+		Transaction t = session.beginTransaction();
+		Query query =  session.createQuery(sql);
+        query.executeUpdate();
+        t.commit();
+        session.close();
 	}
 }

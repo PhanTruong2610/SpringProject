@@ -13,7 +13,6 @@
 	var editor = ""
 	$(document).ready(function() {
 		editor = CKEDITOR.replace('content');
-		editor = CKEDITOR.replace('shortContent');
 	});
 </script>
 
@@ -93,11 +92,11 @@
 				<br />
 				Nội dung ngắn: <form:textarea path="shortContent" id="shortContent" />
 				<br />
-				SubjectId: <form:input path="subjectId" />
+				SubjectId: <form:input path="id.subjectId" />
 				<br />
-				UserId: <form:input path="userId" />
+				UserId: <form:input path="account.userId" />
 				<br />
-				Url: <form:input path="url" />
+				Url: <form:input path="id.url" />
 				<br />
 				<input type="submit" name="Load" value="Load">
 			</form:form>
