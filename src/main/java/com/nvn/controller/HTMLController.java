@@ -20,7 +20,7 @@ public class HTMLController {
 	
 	@RequestMapping("/html")
 	public String getLesson(Model model) {
-		model.addAttribute("listLesson", lessonService.findAll("html"));
+		model.addAttribute("listLesson", lessonService.getAll("html"));
 		model.addAttribute("listCategory", lessonService.findAllCategory());
 		model.addAttribute("url", Util.getUrl());
 		return "Subject/listsubject";
@@ -30,7 +30,7 @@ public class HTMLController {
 	public String viewLessonByUrl(@PathVariable String url, Model model) {
 		Lesson lesson = lessonService.findByName("html", url);
 		model.addAttribute("lesson", lesson);
-		model.addAttribute("listLesson", lessonService.findAll("html"));
+		model.addAttribute("listLesson", lessonService.getAll("html"));
 		model.addAttribute("url", Util.getUrl());
 		return "Subject/subjectdetail";
 	}

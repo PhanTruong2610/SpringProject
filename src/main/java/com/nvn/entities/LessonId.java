@@ -6,6 +6,8 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class LessonId implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private int subjectId;
 	private String url;
 

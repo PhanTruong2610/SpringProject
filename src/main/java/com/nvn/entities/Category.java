@@ -19,6 +19,8 @@ import javax.persistence.Table;
 @Table(name = "category", catalog = "learning")
 public class Category implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private Integer categoryId;
 	private String categoryName;
 	private Set<Subject> subjects = new HashSet<Subject>(0);

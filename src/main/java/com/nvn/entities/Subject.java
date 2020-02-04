@@ -21,6 +21,8 @@ import javax.persistence.Table;
 @Table(name = "subject", catalog = "learning")
 public class Subject implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private Integer subjectId;
 	private Account account;
 	private Category category;

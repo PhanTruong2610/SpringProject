@@ -3,19 +3,7 @@ package com.nvn.entities;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
@@ -23,6 +11,8 @@ import org.hibernate.annotations.Parameter;
 @Table(name = "account", catalog = "learning")
 public class Account implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private Integer userId;
 	private Role role;
 	private String username;
@@ -164,7 +154,7 @@ public class Account implements java.io.Serializable {
 //		this.roleId = roleId;
 //	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
+	@OneToMany(fetch = FetchType.LAZY, cascade= {CascadeType.ALL}, mappedBy = "account")
 	public Set<Lesson> getLessons() {
 		return this.lessons;
 	}

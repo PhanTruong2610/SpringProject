@@ -1,5 +1,4 @@
 package com.nvn.entities;
-// Generated Jan 18, 2020 4:07:11 PM by Hibernate Tools 3.5.0.Final
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -13,6 +12,8 @@ import javax.persistence.Table;
 @Table(name = "customer", catalog = "learning")
 public class Customer implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private Integer id;
 	private String name;
 	private String address;

@@ -67,12 +67,12 @@ public class LessonService implements IService<Lesson>{
 	@Autowired
 	private LessonDAO lessonDAO;
 
-	public List<Lesson> findAll(String name) {
-		return lessonDAO.findAll(name);
+	public List<Lesson> getAll(String name) {
+		return lessonDAO.getAll(name);
 	}
 
 	public List<Category> findAllCategory() {
-		return lessonDAO.findAllCategory();
+		return lessonDAO.getAllCategory();
 	}
 
 	public Lesson findByName(String name, String url) {
@@ -85,17 +85,14 @@ public class LessonService implements IService<Lesson>{
 	}
 
 	public Lesson findById(String name, int id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void update(String name, Lesson k) {
-		// TODO Auto-generated method stub
-		
+	public void update(String name, Lesson lesson) {
+		lessonDAO.update(lesson);
 	}
 
-	public void delete(String name, int id) {
-		// TODO Auto-generated method stub
-		
+	public void delete(String name, int id, Lesson lesson) {
+		lessonDAO.delete(lesson);
 	}
 }

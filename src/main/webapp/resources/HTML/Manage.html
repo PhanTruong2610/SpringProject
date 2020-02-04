@@ -14,7 +14,7 @@
 	<script type="text/javascript">
 		function js(){
 			var str = $("#title").val();
-        	alert(str);
+			alert(str);
 		}
 	</script>
 	<script type="text/javascript">
@@ -27,38 +27,66 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-3">
+			<div class="col-2">
 				<div class="list-group" id="list-tab" role="tablist">
 					<a class="list-group-item list-group-item-action active" id="list-lesson-list" data-toggle="list" href="#list-lesson" role="tab" aria-controls="lesson">Bài viết</a>
 					<a class="list-group-item list-group-item-action" id="list-category-list" data-toggle="list" href="#list-category" role="tab" aria-controls="category">Thể loại</a>
 					<a class="list-group-item list-group-item-action" id="list-account-list" data-toggle="list" href="#list-account" role="tab" aria-controls="account">Tài khoản</a>
-					<a class="list-group-item list-group-item-action" id="list-members-list" data-toggle="list" href="#list-members" role="tab" aria-controls="members">Thành viên</a>
-					<a class="list-group-item list-group-item-action" id="list-image-list" data-toggle="list" href="#list-image" role="tab" aria-controls="image">Hình ảnh</a>
+					<a class="list-group-item list-group-item-action" id="list-members-list" data-toggle="list" href="#list-members" role="tab" aria-controls="members">Hình ảnh</a>
+					<a class="list-group-item list-group-item-action" id="list-image-list" data-toggle="list" href="#list-image" role="tab" aria-controls="image">Thành viên</a>
 				</div>
 			</div>
-			<div class="col-9">
+			<div class="col-10">
 				<div class="tab-content" id="nav-tabContent">
 					<!-- Tab 1 -->
-					<div class="tab-pane fade show active" id="list-lesson" role="tabpanel" aria-labelledby="list-lesson-list">
-						<form action="">
-							<label for="title">Tiêu đề</label>
-							<input type="text" name="title" id="title"><br/>
-
-							<label for="image">Hình ảnh</label>
-							<input type="text" name="image" id="image"><br/>
-
-							<label for="content">Nội dung</label>
-							<textarea name="content" id="content"></textarea><br/>
-
-							<label for="sub">SubjectId</label>
-							<input type="text" name="sub" id="sub"><br/>
-
-							<label for="user">UserId</label>
-							<input type="text" name="user" id="user"><br/>
-
-							<label for="url">Url</label>
-							<input type="text" name="url" id="url"><br/>
-						</form>
+					<div class="tab-pane fade show active" aria-labelledby="list-lesson-list">
+						
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Tiêu đề</th>
+									<th scope="col">Hình ảnh</th>
+									<th scope="col">Nội dung</th>
+									<th scope="col">Nội dung ngắn</th>
+									<th scope="col">Thời gian tạo</th>
+									<th scope="col">Thời gian cập nhật</th>
+									<th scope="col">Người thêm</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 
 					<!-- Tab 2 -->
@@ -81,7 +109,51 @@
 				</div>
 
 				<input type="hidden" name="nam" value="nam"/>
-				<input type="submit" name="Click" onclick="js()" value="Click"/>
+				<!-- <input type="submit" name="Click" onclick="js()" value="Click"/> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+		Launch demo modal
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<label for="title">Tiêu đề</label>
+						<input type="text" name="title" id="title"><br/>
+
+						<label for="image">Hình ảnh</label>
+						<input type="text" name="image" id="image"><br/>
+
+						<label for="content">Nội dung</label>
+						<textarea name="content" id="content"></textarea><br/>
+
+						<label for="sub">SubjectId</label>
+						<input type="text" name="sub" id="sub"><br/>
+
+						<label for="user">UserId</label>
+						<input type="text" name="user" id="user"><br/>
+
+						<label for="url">Url</label>
+						<input type="text" name="url" id="url"><br/>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
 			</div>
 		</div>
 	</div>

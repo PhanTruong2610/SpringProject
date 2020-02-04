@@ -20,7 +20,7 @@ public class CController {
 	
 	@RequestMapping("/c")
 	public String getLesson(Model model) {
-		model.addAttribute("listLesson", lessonService.findAll("c"));
+		model.addAttribute("listLesson", lessonService.getAll("c"));
 		model.addAttribute("listCategory", lessonService.findAllCategory());
 		model.addAttribute("url", getUrl());
 		return "Subject/listsubject";

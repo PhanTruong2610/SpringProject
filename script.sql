@@ -76,4 +76,6 @@ INSERT INTO `learning`.`lesson` (`Title`, `Image`, `Content`, `SubjectId`,`UserI
 	--------------------------------------------------------------------------------------------------------------------------------------------------
 	select * from lesson;
     
+    select * from subject;
+    
     INSERT INTO Lesson (Title, Image, Content, ShortContent, SubjectId, UserId, Url) VALUES ('lich su', './resources/img/Anh1.jpg', 'sdf', 'ShortContent', '1', '1', 'lich-su');
