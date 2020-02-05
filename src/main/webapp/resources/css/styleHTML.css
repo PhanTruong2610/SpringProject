@@ -67,7 +67,7 @@ body{
 }
 
 .personpost{
-    bottom: 0px;
+    bottom: 10px;
     position: absolute;
     font-size: 12px;
     font-style: italic;
