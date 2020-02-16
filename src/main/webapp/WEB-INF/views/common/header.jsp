@@ -25,7 +25,7 @@
 					<li class="nav-item" id="css"><a class="nav-link" href="#">CSS</a></li>
 					<li class="nav-item" id="javascript"><a class="nav-link" href="#">JavaScript</a>
 					</li>
-					<li class="nav-item" id="java"><a class="nav-link" href="manage">Java</a></li>
+					<li class="nav-item" id="java"><a class="nav-link" href="#">Java</a></li>
 					<li class="nav-item" id="python"><a class="nav-link" href="#">Python</a></li>
 					<li class="nav-item" id="forum"><a class="nav-link" href="#">Diễn đàn</a></li>
 				</ul>
