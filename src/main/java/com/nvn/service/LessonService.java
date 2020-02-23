@@ -66,6 +66,10 @@ public class LessonService implements IService<Lesson>{
 	//hibernate
 	@Autowired
 	private LessonDAO lessonDAO;
+	
+	public List<Lesson> getAll() {
+		return lessonDAO.getAll();
+	}
 
 	public List<Lesson> getAll(String name) {
 		return lessonDAO.getAll(name);
@@ -73,6 +77,10 @@ public class LessonService implements IService<Lesson>{
 
 	public List<Category> findAllCategory() {
 		return lessonDAO.getAllCategory();
+	}
+	
+	public Category findCategoryById(String id) {
+		return lessonDAO.findCategoryById(id);
 	}
 
 	public Lesson findByName(String name, String url) {
@@ -84,15 +92,16 @@ public class LessonService implements IService<Lesson>{
 		lessonDAO.insert(lesson);
 	}
 
-	public Lesson findById(String name, int id) {
-		return null;
+	public Lesson findById(int subjectId, String url) {
+		return lessonDAO.findById(subjectId, url);
 	}
 
-	public void update(String name, Lesson lesson) {
-		lessonDAO.update(lesson);
+	public void update(Lesson lesson, int subjectId, String url) {
+		lessonDAO.update(lesson, subjectId, url);
 	}
 
-	public void delete(String name, int id, Lesson lesson) {
-		lessonDAO.delete(lesson);
+	public void delete(String name, String url) {
+		lessonDAO.delete(name, url);
 	}
+	
 }

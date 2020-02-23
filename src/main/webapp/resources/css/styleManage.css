@@ -9,6 +9,11 @@ body{
 
 #nav-tabContent button{
 	right: 0px;
-	margin-right: 10px;
+	margin-right: 50px;
 	position: absolute;
+}
+
+#modal label{
+	width: 200px;
+	display: inline-block;
 }

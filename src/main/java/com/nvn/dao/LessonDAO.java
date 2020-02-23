@@ -22,6 +22,13 @@ public class LessonDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
+	public List<Lesson> getAll() {
+		Session session = this.sessionFactory.openSession();
+	    String sql = "from Lesson les";
+	    List<Lesson> result = session.createQuery(sql, Lesson.class).getResultList();
+	    return result;
+	}
+	
 	public List<Lesson> getAll(String name) {
 		Session session = this.sessionFactory.openSession();
 	    String sql = "from Lesson les where les.subject.subjectId=(select subjectId from Subject sub where sub.subjectName='"+name+"')";
@@ -32,6 +39,11 @@ public class LessonDAO {
 	public List<Category> getAllCategory() {
 		Session session = this.sessionFactory.openSession();
 		return session.createQuery("FROM Category", Category.class).getResultList();
+	}
+	
+	public Category findCategoryById(String id) {
+		Session session = this.sessionFactory.openSession();
+		return session.createQuery("FROM Category cat where cat.categoryId='"+id+"'", Category.class).getResultList().get(0);
 	}
 	
 	public Lesson findByName(String name, String url) {
@@ -65,22 +77,29 @@ public class LessonDAO {
 		session.close();
 	}
 	
-	public void update(Lesson lesson) {
+	public void update(Lesson lesson, int subjectId, String url) {
 		Session session = this.sessionFactory.openSession();
 		Transaction tx1 = session.beginTransaction();
 		lesson.setAccount(findAllAccount(session, 1).get(0));
-		session.save(lesson);
+		session.update(lesson);
 		tx1.commit();
 		session.close();
 	}
 	
-	public void delete(Lesson lesson) {
+	public void delete(String subjectId, String url) {
 		Session session = this.sessionFactory.openSession();
-		String sql = "delete Lesson les where les.title='lich su'";
+		String sql = "delete Lesson les where les.id.subjectId='"+subjectId+"' and les.id.url='"+url+"'";
 		Transaction t = session.beginTransaction();
 		Query<?> query =  session.createQuery(sql);
         query.executeUpdate();
         t.commit();
         session.close();
+	}
+	
+	public Lesson findById(int subjectId, String url) {
+		Session session = this.sessionFactory.openSession();
+	    String sql = "from Lesson les where les.id.subjectId="+subjectId+" and les.id.url='"+url+"'";
+	    List<Lesson> result = session.createQuery(sql, Lesson.class).getResultList();
+		return result.get(0);
 	}
 }

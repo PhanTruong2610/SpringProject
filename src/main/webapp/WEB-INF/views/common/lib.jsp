@@ -32,5 +32,6 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
 	rel="stylesheet">
+<link rel="stylesheet" href="./resources/fontawesome/css/all.min.css">
 <script src="./resources/js/style.js"></script>
 </html>
