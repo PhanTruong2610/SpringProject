@@ -114,6 +114,7 @@ public class JavaConfiguration implements WebMvcConfigurer {
 		prop.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 		prop.put("hibernate.show_sql", "true");
 		prop.put("hibernate.hibernate.current_session_context_class", "thread");
+		prop.put("hibernate.transaction.auto_close_session", "true");
 		localSessionFactoryBean.setHibernateProperties(prop);
 		localSessionFactoryBean.setAnnotatedClasses(Account.class, Category.class, Lesson.class, Subject.class);
 		return localSessionFactoryBean;

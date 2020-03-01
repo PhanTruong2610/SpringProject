@@ -74,7 +74,9 @@ CREATE TABLE `learning`.`LESSON`
 INSERT INTO `learning`.`lesson` (`Title`, `Image`, `Content`, `SubjectId`,`UserId`) VALUES ('Giới thiệu', 'img/Anh1.jpg', 'Nội dung bài giới thiệu', '1','1');
 
 	--------------------------------------------------------------------------------------------------------------------------------------------------
-	select * from lesson;
+	select * from lesson where url='gioi-thieu' and SubjectId=1;
+    
+    select * from category;
     
     select * from subject;
     

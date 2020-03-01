@@ -18,7 +18,7 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<a href="html">
-					<img src="./resources/img/Anh1.jpg" class="d-block w-100" alt="Girl">
+					<img src="./resources/img/Anh4.png" class="d-block w-100" alt="Girl">
 				</a>
 				<!-- <div class="carousel-caption d-none d-md-block">
 					<h5>First slide label</h5>
@@ -27,7 +27,7 @@
 			</div>
 			<div class="carousel-item">
 				<a href="html">
-					<img src="./resources/img/Anh2.jpg" class="d-block w-100"alt="Girl">
+					<img src="./resources/img/Anh5.jpg" class="d-block w-100"alt="Girl">
 				</a>
 				<!-- div class="carousel-caption d-none d-md-block">
 					<h5>Second slide label</h5>
@@ -36,7 +36,7 @@
 			</div>
 			<div class="carousel-item">
 				<a href="html">
-					<img src="./resources/img/Anh3.jpg" class="d-block w-100"alt="Girl">
+					<img src="./resources/img/Anh6.png" class="d-block w-100"alt="Girl">
 				</a>
 				<!-- <div class="carousel-caption d-none d-md-block">
 					<h5>Third slide label</h5>

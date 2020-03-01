@@ -67,33 +67,21 @@ public class LessonService implements IService<Lesson>{
 	@Autowired
 	private LessonDAO lessonDAO;
 	
-	public List<Lesson> getAll() {
-		return lessonDAO.getAll();
-	}
-
-	public List<Lesson> getAll(String name) {
+	public List<?> getAll(String name) {
 		return lessonDAO.getAll(name);
-	}
-
-	public List<Category> findAllCategory() {
-		return lessonDAO.getAllCategory();
-	}
-	
-	public Category findCategoryById(String id) {
-		return lessonDAO.findCategoryById(id);
 	}
 
 	public Lesson findByName(String name, String url) {
 		return lessonDAO.findByName(name, url);
 	}
 
-	public void insert(String name, Lesson lesson) {
-
-		lessonDAO.insert(lesson);
-	}
-
 	public Lesson findById(int subjectId, String url) {
 		return lessonDAO.findById(subjectId, url);
+	}
+
+	public void insert(Lesson lesson) {
+
+		lessonDAO.insert(lesson);
 	}
 
 	public void update(Lesson lesson, int subjectId, String url) {
@@ -102,6 +90,10 @@ public class LessonService implements IService<Lesson>{
 
 	public void delete(String name, String url) {
 		lessonDAO.delete(name, url);
+	}
+
+	public List<?> getAll() {
+		return lessonDAO.getAll();
 	}
 	
 }

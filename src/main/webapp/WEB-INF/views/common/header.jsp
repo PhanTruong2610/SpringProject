@@ -22,12 +22,12 @@
 					<li class="nav-item" id="c"><a class="nav-link"
 						href="c">C/C++</a></li>
 					<li class="nav-item" id="html"><a class="nav-link" href="html">HTML</a></li>
-					<li class="nav-item" id="css"><a class="nav-link" href="#">CSS</a></li>
-					<li class="nav-item" id="javascript"><a class="nav-link" href="#">JavaScript</a>
+					<li class="nav-item" id="css"><a class="nav-link" href="css">CSS</a></li>
+					<li class="nav-item" id="javascript"><a class="nav-link" href="javascript">JavaScript</a>
 					</li>
-					<li class="nav-item" id="java"><a class="nav-link" href="#">Java</a></li>
-					<li class="nav-item" id="python"><a class="nav-link" href="#">Python</a></li>
-					<li class="nav-item" id="forum"><a class="nav-link" href="#">Diễn đàn</a></li>
+					<li class="nav-item" id="java"><a class="nav-link" href="java">Java</a></li>
+					<li class="nav-item" id="python"><a class="nav-link" href="python">Python</a></li>
+					<!-- <li class="nav-item" id="forum"><a class="nav-link" href="#">Diễn đàn</a></li> -->
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search"
@@ -35,7 +35,7 @@
 					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Tìm
 						kiếm</button>
 				</form>
-				<a href="" class="login">Đăng nhập </a>
+				<a href="login" class="login">Đăng nhập </a>
 			</div>
 		</nav>
 	</div>
