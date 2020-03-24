@@ -68,4 +68,9 @@ public class ManageController {
 		model.addAttribute("allCategory", categoryService.getAll());
 		return "MANAGE/manage";
 	}
+	
+	@RequestMapping("/close")
+	public String close(Model model) {
+		return "redirect:/java";
+	}
 }

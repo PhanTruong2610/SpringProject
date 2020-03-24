@@ -25,22 +25,22 @@ public class LoginController {
 		return "Login/login";
 	}
 	
-//	@RequestMapping(value= {"/","home"})
-//	public String login(HttpServletRequest request,@ModelAttribute("account") Account account) {
-//		//tên thuộc tính bên jsp phải trùng với model nó sẽ tự động link
-//		//if(account.getUserName().equals("devmaster") && account.getPassword().equals("devmaster")) return "main";
-//		//if(doLogin(account)) return "main";
-//		return "HOME/home";
-//	}
-//	
-//	public boolean doLogin(Account account) {
-//		try {
-//			String sql="SELECT * FROM student.account where user = ? and password =?";
-//			account = jdbcTemplate.queryForObject(sql, new String[] {account.getUserName(),account.getPassword()}, new AccountMapper());
-//			if(account!=null) return true;
-//		} catch (Exception e) {
-//			return false;
-//		}
-//		return false;
-//	}
+/*	@RequestMapping(value= {"/","home"})
+	public String login(HttpServletRequest request,@ModelAttribute("account") Account account) {
+		//tên thuộc tính bên jsp phải trùng với model nó sẽ tự động link
+		//if(account.getUserName().equals("devmaster") && account.getPassword().equals("devmaster")) return "main";
+		//if(doLogin(account)) return "main";
+		return "HOME/home";
+	}
+	
+	public boolean doLogin(Account account) {
+		try {
+			String sql="SELECT * FROM student.account where user = ? and password =?";
+			account = jdbcTemplate.queryForObject(sql, new String[] {account.getUserName(),account.getPassword()}, new AccountMapper());
+			if(account!=null) return true;
+		} catch (Exception e) {
+			return false;
+		}
+		return false;
+	}*/
 }

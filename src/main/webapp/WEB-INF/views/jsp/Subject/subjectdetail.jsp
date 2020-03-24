@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HTML</title>
+<title>${lesson.title}</title>
 <jsp:include page="../../common/lib.jsp" />
 <jsp:include page="../../common/header.jsp" />
 <link rel="stylesheet" href="./resources/css/styleHTML.css">

@@ -34,7 +34,7 @@
 						id="list-image-list" data-toggle="list" href="#list-image"
 						role="tab" aria-controls="image">Thành viên</a> -->
 						<a class="list-group-item list-group-item-action"
-						id="exit" href="#">Thoát</a>
+						id="exit" href="close">Thoát</a>
 				</div>
 			</div>
 			<div class="col-9">
