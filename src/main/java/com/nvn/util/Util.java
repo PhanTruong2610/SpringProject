@@ -8,6 +8,6 @@ public class Util {
 		UriComponentsBuilder builder = ServletUriComponentsBuilder.fromCurrentRequest();
         String context = builder.buildAndExpand().getPath();
         String[] list= context.split("/");
-        return list[2];
+        return list[1];
 	}
 }
