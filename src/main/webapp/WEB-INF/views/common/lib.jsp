@@ -18,8 +18,6 @@
 <script type="text/javascript" src="./resources/ckeditor/ckeditor.js"> </script>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0"></script>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="./resources/css/style.css"> -->
-<link rel="shortcut icon" href="./resources/img/favicon.ico" />
 <link
 	href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap"
 	rel="stylesheet">
@@ -34,4 +32,5 @@
 	rel="stylesheet">
 <link rel="stylesheet" href="./resources/fontawesome/css/all.min.css">
 <script src="./resources/js/style.js"></script>
+
 </html>

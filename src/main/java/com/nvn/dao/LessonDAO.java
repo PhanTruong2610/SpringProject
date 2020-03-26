@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.nvn.entities.Account;
-import com.nvn.entities.Category;
 import com.nvn.entities.Lesson;
 import com.nvn.entities.Subject;
 
@@ -22,9 +21,6 @@ import com.nvn.entities.Subject;
 public class LessonDAO{
 	@Autowired
 	private SessionFactory sessionFactory;
-	
-	@Autowired
-	private AccountDAO accountDAO;
 	
 	Session session=null;
 	
@@ -35,12 +31,12 @@ public class LessonDAO{
 		return session.createQuery(cq).getResultList();
 	}
 	
-	public List<?> getAll(String name) {
+	public List<Lesson> getAll(String name) {
 		if (session==null) session = this.sessionFactory.openSession();
 	    String sql = "from Lesson les where les.subject.subjectId=(select subjectId from Subject sub where sub.subjectName=:name)";
 	    Query<?> query = session.createQuery(sql, Lesson.class);
 	    query.setParameter("name", name);
-	    List<?> result = query.getResultList();
+	    List<Lesson> result = (List<Lesson>) query.getResultList();
 	    return result;
 	}
 	
@@ -98,7 +94,6 @@ public class LessonDAO{
 	public Lesson findById(int subjectId, String url) {
 		if (session==null) session = this.sessionFactory.openSession();
 	    String sql = "from Lesson les where les.id.subjectId="+subjectId+" and les.id.url='"+url+"'";
-	    List<Lesson> result = session.createQuery(sql, Lesson.class).getResultList();
-		return result.get(0);
+	    return session.createQuery(sql, Lesson.class).getSingleResult();
 	}
 }

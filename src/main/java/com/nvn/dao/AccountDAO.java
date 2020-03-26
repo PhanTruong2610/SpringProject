@@ -2,7 +2,6 @@ package com.nvn.dao;
 
 import java.util.List;
 
-import javax.persistence.criteria.CriteriaQuery;
 import javax.transaction.Transactional;
 
 import org.hibernate.Session;

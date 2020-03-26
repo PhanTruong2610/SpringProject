@@ -1,17 +1,18 @@
 package com.nvn.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.nvn.entities.Category;
+import com.nvn.entities.Customer;
 import com.nvn.entities.Lesson;
 import com.nvn.service.CategoryService;
-import com.nvn.service.IService;
-//import com.nvn.model.Lesson;
 import com.nvn.service.LessonService;
 import com.nvn.util.Util;
 
@@ -23,6 +24,12 @@ public class LessonController {
 	
 	@Autowired
 	private CategoryService categoryService;
+	
+	@RequestMapping("/test")
+	@ResponseBody
+	public Lesson test() {
+		return (Lesson) lessonService.getAll("C").get(0);
+	}
 	
 	@RequestMapping("/{subject}")
 	public String getLesson(@PathVariable String subject,Model model) {

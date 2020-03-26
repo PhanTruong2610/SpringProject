@@ -1,6 +1,8 @@
 package com.nvn.entities;
 
+import java.io.Serializable;
 import java.util.Date;
+
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.CascadeType;
@@ -14,10 +16,14 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "lesson")
-public class Lesson {
+public class Lesson implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private LessonId id;
 	private Account account;
 	private Subject subject;
@@ -68,6 +74,7 @@ public class Lesson {
 		this.id = id;
 	}
 
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY,cascade=CascadeType.ALL)
 	@JoinColumn(name = "UserId", nullable = false)
 	public Account getAccount() {
@@ -78,6 +85,7 @@ public class Lesson {
 		this.account = account;
 	}
 
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name = "SubjectId", nullable = false, insertable = false, updatable = false)
 	public Subject getSubject() {

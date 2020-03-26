@@ -22,7 +22,6 @@ public class Account implements java.io.Serializable {
 	private Date dateOfBirth;
 	private String email;
 	private String phone;
-//	private int roleId;
 	private Set<Lesson> lessons = new HashSet<Lesson>(0);
 	private Set<Subject> subjects = new HashSet<Subject>(0);
 
